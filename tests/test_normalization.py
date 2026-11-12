@@ -1,4 +1,8 @@
-from nexus_pulse_intelligence.normalization import canonicalize_url, normalize_text, text_fingerprint
+from nexus_pulse_intelligence.normalization import (
+    canonicalize_url,
+    normalize_text,
+    text_fingerprint,
+)
 
 
 def test_canonicalize_url_removes_tracking_and_fragment() -> None:
