@@ -66,7 +66,11 @@ def compare_articles(
 
     similarity = SequenceMatcher(None, left, right, autojunk=False).ratio()
     if similarity >= possible_duplicate_threshold:
-        return DuplicateResult(DuplicateStatus.POSSIBLE_DUPLICATE, "similar_title_review_required", similarity)
+        return DuplicateResult(
+    DuplicateStatus.POSSIBLE_DUPLICATE,
+    "similar_title_review_required",
+    similarity,
+)
 
 
     return DuplicateResult(DuplicateStatus.DISTINCT, "no_duplicate_match", similarity)
